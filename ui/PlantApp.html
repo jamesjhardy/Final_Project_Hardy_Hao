@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset = "utf-8">
+    <!-- scale the page to the screen -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- set the title -->
+    <title>Plant Watering Controller</title>
+    <!-- link the CSS styles -->
+    <link rel = "stylesheet" href="styles.css">
+    <!-- JavaScripts -->
+    <!-- <script src="GarageApp.js"></script>
+    <script src="GarageModel.js"></script> -->
+
+  </head>
+
+  <body>
+
+
+      <!-- CONTROLS PAGE -->
+      <div id = "controls">
+        <!-- give page heading -->
+        <h1 >Plant name here</h1>
+        <!-- image -->
+        <img src="plant.svg" alt="Picture of Plant" width="200" height="300">
+        <!-- moisture status -->
+        <p id = "MoistureLevel"> Moisture Level: 50%</p>
+        <!-- light status -->
+        <p id = "LastWaterTime"> Last Water: 1hr 50min ago</p>
+        <!--  low water warning -->
+        <p id = "lowWater"> WARNING: LOW WATER </p>
+        <!--  water plant button -->
+        <input type = "button" class = "button" value= "Water Plant" id = "waterButton">
+        <br><br>
+        <!-- settings button -->
+        <input type = "button" class = "button" value= "Settings" id = "settingsButton">
+      </div>
+
+
+      <!-- SETTINGS PAGE -->
+      <div id = "advanced">
+        <!-- give page heading -->
+        <h1 >Settings</h1>
+        <!-- Auto close -->
+        <p> Auto-Water: </p>
+        <label class="switch">
+            <input type="checkbox" id="autoWater">
+            <span class="slider round"></span>
+        </label>
+        <!-- time until water -->
+        <p> Time Between Watering: </p>
+        <p id = "autoWaterTime"> 10 hrs </p>
+        <input type = "range" min="1" max="48" value= "10" id="autoWaterRange">
+        <!-- desired Moisture level-->
+        <p> Desired Moisture Level: </p>
+        <p id = "autoMoistureLevel"> 50% </p>
+        <input type = "range" min="0" max="100" value= "50" id="autoMoistureRange">
+        <br><br>
+        <!-- back to basic controls button -->
+        <input type = "button" class = "button" value= "Back to Controls" id = "controlsButton">
+        <br><br>
+      </div>
+
+      <!-- JacaScripts -->
+      <script src="PlantApp.js"></script>
+      <script src="Plant.js"></script>
+      <script src="./resources/particle/particle.min.js"></script>
+
+
+  </body>
+</html>
